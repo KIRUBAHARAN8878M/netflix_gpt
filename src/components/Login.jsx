@@ -8,6 +8,7 @@ import {
   updateProfile
 } from "firebase/auth";
 import { useDispatch } from "react-redux";
+import { BGIMAGE, PHOTOURL } from "../utils/constants";
 
 const Login = () => {
   const [isSignInForm, setIsSignInForm] = useState(true);
@@ -32,7 +33,7 @@ const Login = () => {
           const user = userCredential.user;
           updateProfile(user, {
             displayName: name.current.value,
-            photoURL: "https://avatars.githubusercontent.com/u/105787201?v=4",
+            photoURL: PHOTOURL,
           })
             .then(() => {
               // Profile updated!
@@ -86,7 +87,7 @@ const Login = () => {
       <Header />
       <div className="absolute">
         <img
-          src="https://assets.nflxext.com/ffe/siteui/vlv3/c8267e3b-8beb-4ec5-8e00-a74f627a0971/web/IN-en-20250623-TRIFECTA-perspective_c3506438-e049-4b1d-82df-a88ad340f15e_large.jpg"
+          src={BGIMAGE}
           alt="bg_img"
         />
       </div>
