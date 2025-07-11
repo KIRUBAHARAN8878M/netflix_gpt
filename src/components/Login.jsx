@@ -83,9 +83,9 @@ const Login = () => {
     setIsSignInForm(!isSignInForm);
   };
   return (
-    <div className="bg-red-400s">
+    <div className="bg-red-400">
       <Header />
-      <div className="absolute">
+      <div className="absolu////te">
         <img
           src={BGIMAGE}
           alt="bg_img"
